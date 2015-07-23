@@ -24,3 +24,11 @@ endfunction
 function! operator#eval#perl(motion_wiseness)
   call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_perl')
 endfunction
+
+function! s:eval_ruby(expr)
+  return system("ruby -e'print eval $<.map(&:chomp).join'", a:expr)
+endfunction
+
+function! operator#eval#ruby(motion_wiseness)
+  call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_ruby')
+endfunction
