@@ -22,20 +22,20 @@ function! s:eval_vim(expr) abort
   return eval(chomped_expr)
 endfunction
 
-function! operator#eval#vim(motion_wiseness) abort
-  silent call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_vim')
-endfunction
-
 function! s:eval_perl(expr) abort
   return system("perl -e'print eval join(\"\", <>)'", a:expr)
 endfunction
 
-function! operator#eval#perl(motion_wiseness) abort
-  call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_perl')
-endfunction
-
 function! s:eval_ruby(expr) abort
   return system("ruby -e'print eval $<.map(&:chomp).join'", a:expr)
+endfunction
+
+function! operator#eval#vim(motion_wiseness) abort
+  silent call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_vim')
+endfunction
+
+function! operator#eval#perl(motion_wiseness) abort
+  call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_perl')
 endfunction
 
 function! operator#eval#ruby(motion_wiseness) abort
