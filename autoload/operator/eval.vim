@@ -1,4 +1,4 @@
-function! s:rewrite_textobj_by(motion_wiseness, func_name)
+function! s:rewrite_textobj_by(motion_wiseness, func_name) abort
   let v = operator#user#visual_command_from_wise_name(a:motion_wiseness)
   let Func = function(a:func_name)
   try
@@ -17,18 +17,18 @@ function! s:rewrite_textobj_by(motion_wiseness, func_name)
   endtry
 endfunction
 
-function s:eval_perl(expr)
+function! s:eval_perl(expr) abort
   return system("perl -e'print eval join(\"\", <>)'", a:expr)
 endfunction
 
-function! operator#eval#perl(motion_wiseness)
+function! operator#eval#perl(motion_wiseness) abort
   call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_perl')
 endfunction
 
-function! s:eval_ruby(expr)
+function! s:eval_ruby(expr) abort
   return system("ruby -e'print eval $<.map(&:chomp).join'", a:expr)
 endfunction
 
-function! operator#eval#ruby(motion_wiseness)
+function! operator#eval#ruby(motion_wiseness) abort
   call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_ruby')
 endfunction
