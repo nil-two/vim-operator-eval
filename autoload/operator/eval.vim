@@ -1,3 +1,6 @@
+let s:save_cpo = &cpo
+set cpo&vim
+
 function! s:rewrite_textobj_by(motion_wiseness, func_name) abort
   let v = operator#user#visual_command_from_wise_name(a:motion_wiseness)
   let Func = function(a:func_name)
@@ -41,3 +44,6 @@ endfunction
 function! operator#eval#ruby(motion_wiseness) abort
   call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_ruby')
 endfunction
+
+let &cpo = s:save_cpo
+unlet s:save_cpo
