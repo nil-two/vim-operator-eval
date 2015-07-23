@@ -17,6 +17,15 @@ function! s:rewrite_textobj_by(motion_wiseness, func_name) abort
   endtry
 endfunction
 
+function! s:eval_vim(expr) abort
+  let chomped_expr = substitute(a:expr, '[\r\n]', '', 'g')
+  return eval(chomped_expr)
+endfunction
+
+function! operator#eval#vim(motion_wiseness) abort
+  silent call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_vim')
+endfunction
+
 function! s:eval_perl(expr) abort
   return system("perl -e'print eval join(\"\", <>)'", a:expr)
 endfunction
