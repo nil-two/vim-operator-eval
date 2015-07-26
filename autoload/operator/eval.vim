@@ -38,11 +38,11 @@ function! operator#eval#vim(motion_wiseness) abort
 endfunction
 
 function! operator#eval#perl(motion_wiseness) abort
-  call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_perl')
+  silent call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_perl')
 endfunction
 
 function! operator#eval#ruby(motion_wiseness) abort
-  call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_ruby')
+  silent call s:rewrite_textobj_by(a:motion_wiseness, 's:eval_ruby')
 endfunction
 
 let &cpo = s:save_cpo
