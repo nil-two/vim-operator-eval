@@ -1,7 +1,16 @@
 vim-operator-eval
 =================
 
-Eval a text as an expression.
+Eval a text object as an expression.
+
+```
+" from
+(3 + 10) * 5
+
+" to
+65
+```
+
 
 Requirements
 ------------
