@@ -17,7 +17,7 @@ CHANGELOG			|operator-eval-changelog|
 ==============================================================================
 INTRODUCTION					*operator-eval-introduction*
 
-*vim-operator-eval* is a Vim plugin to provide an operator
+*operator-eval* is a Vim plugin to provide an operator
 to eval specified a text as an expression.
 
 Requirements:
