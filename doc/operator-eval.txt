@@ -35,17 +35,17 @@ INTERFACE					*operator-eval-interface*
 KEY MAPPINGS					*operator-eval-key-mappings*
 
 <Plug>(operator-eval-vim)			*<Plug>(operator-eval-vim)*
-			Eval text as |VimL|
+			Eval text as VimL.
 
 <Plug>(operator-eval-perl)			*<Plug>(operator-eval-perl)*
-			Eval text as |Perl5|
+			Eval text as Perl5.
 			Requirements:
-			- |perl|
+			- perl
 
 <Plug>(operator-eval-ruby)			*<Plug>(operator-eval-ruby)*
-			Eval text as |Ruby|
+			Eval text as Ruby.
 			Requirements:
-			- |ruby|
+			- ruby
 
 
 
