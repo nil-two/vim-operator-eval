@@ -1,7 +1,7 @@
 *operator-eval.txt*	Eval a text as an expression
 
 Version: 0.1.0
-Author : kusabashira <kusabashira227@gmail.com>
+Author : nil2 <nil2@nil2.org>
 License: MIT License
 
 ==============================================================================
@@ -23,7 +23,7 @@ Requirements:
 - |operator-user|     https://github.com/kana/vim-operator-user
 
 Latest version:
-https://github.com/kusabashira/vim-operator-eval
+https://github.com/nil2nekoni/vim-operator-eval
 
 
 ==============================================================================
