@@ -23,7 +23,7 @@ Requirements:
 - |operator-user|     https://github.com/kana/vim-operator-user
 
 Latest version:
-https://github.com/nil2nekoni/vim-operator-eval
+https://github.com/nil-two/vim-operator-eval
 
 
 ==============================================================================
